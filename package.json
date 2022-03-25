@@ -1,19 +1,17 @@
 {
-  "name": "jddotdev",
-  "version": "1.0.0",
-  "description": "James Davies' personal site",
-  "main": "index.js",
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "npx prettier -w -c ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/j-dav/jddotdev.git"
-  },
-  "author": "James Davies",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/j-dav/jddotdev/issues"
-  },
-  "homepage": "https://github.com/j-dav/jddotdev#readme"
+  "devDependencies": {
+    "astro": "^0.24.3",
+    "prettier": "^2.6.1",
+    "prettier-plugin-astro": "^0.0.12"
+  }
 }
