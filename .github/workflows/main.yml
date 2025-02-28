@@ -1,50 +1,37 @@
-# Workflow to build and deploy to your GitHub Pages repo.
-
-# Edit your project details here.
-# Remember to add API_TOKEN_GITHUB in repo Settings > Secrets as well!
-env:
-  githubEmail: jamesmikedavies@gmail.com
-  deployToRepo: jddotdev
-
-name: Github Pages Astro CI
+name: Deploy to GitHub Pages
 
 on:
-  # Triggers the workflow on push and pull request events but only for the main branch
+  # Trigger the workflow every time you push to the `main` branch
+  # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
-
-  # Allows you to run this workflow manually from the Actions tab.
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Install dependencies with npm
-      - name: Install dependencies
-        run: npm ci
-
-      # Build the project and add .nojekyll file to supress default behaviour
-      - name: Build
-        run: |
-          npm run build
-          touch ./dist/.nojekyll
-
-      # Push to your pages repo
-      - name: Push to pages repo
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
         with:
-          source-directory: 'dist'
-          destination-github-username: ${{ github.actor }}
-          destination-repository-name: ${{ env.deployToRepo }}
-          user-email: ${{ env.githubEmail }}
-          commit-message: Deploy ORIGIN_COMMIT
-          target-branch: gh-pages
+          node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
