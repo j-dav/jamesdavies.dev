@@ -3,16 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+    "dev": "eleventy --serve --port=3000",
+    "start": "eleventy --serve --port=3000",
+    "build": "eleventy",
+    "clean": "rm -rf _site",
     "format": "npx prettier -w -c ."
   },
   "devDependencies": {
-    "astro": "^5.4.1"
+    "@11ty/eleventy": "^3.0.0"
   },
   "volta": {
-    "node": "20.18.3"
+    "node": "24.7.0"
   }
 }

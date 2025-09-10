@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{{ title | default("James Davies") }}</title>
+  <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <header>{% include "navbar.njk" %}</header>
+    <main class="main-content">
+      {{ content | safe }}
+    </main>
+  </body>
+</html>
