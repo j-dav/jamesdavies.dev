@@ -33,8 +33,7 @@ jobs:
       - name: Build site (Eleventy)
         run: npm run build
 
-      - name: Copy CNAME (custom domain)
-        if: exists('CNAME')
+      - name: Copy CNAME from root dir
         run: cp CNAME _site/CNAME
 
       - name: Upload artifact
