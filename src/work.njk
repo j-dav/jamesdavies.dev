@@ -2,4 +2,29 @@
 layout: base.njk
 title: Work
 ---
-<div></div>
+<section class="section-spacer work-section">
+  <div class="section-header">
+    <p>Work</p>
+  </div>
+  {% for entry in work %}
+  <ul>
+    <li style="font-weight: 600;">{{ entry.company }}</li>
+    <li>{{ entry.role }}</li>
+    <li>{{ entry.dates }}</li>
+    {% if entry.summary or entry.details %}
+    <article>
+      {% if entry.summary %}
+      <p>{{ entry.summary }}</p>
+      {% endif %}
+      {% if entry.details %}
+      <ul class="work-details">
+        {% for detail in entry.details %}
+        <li>{{ detail }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </article>
+    {% endif %}
+  </ul>
+  {% endfor %}
+</section>

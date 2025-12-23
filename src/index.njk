@@ -2,11 +2,7 @@
 layout: base.njk
 title: James Davies
 ---
-<section>
-  <div class="intro">
-    <p>James Davies</p>
-    <p>Software Engineer</p>
-  </div>
+<section class="section-spacer">
   <article>
     <p>
       I'm a software engineer, passionate problem solver, mentor, tech lead,
@@ -28,18 +24,16 @@ title: James Davies
     <a href="/work">Work</a>
     <a href="/work">View all work</a>
   </div>
+  {% set latestWork = work[0] %}
   <ul>
-    <li style="font-weight: 600;">Financial Times</li>
-    <li>Senior Software Engineer</li>
-    <li>Mar 2021 - Present</li>
+    <li style="font-weight: 600;">{{ latestWork.company }}</li>
+    <li>{{ latestWork.role }}</li>
+    <li>{{ latestWork.dates }}</li>
+    {% if latestWork.summary %}
     <article>
-      <p>
-        I am currently working as a Senior Software Engineer at the
-        Financial Times. I work in the Origami team as a Workstream lead,
-        building services and tools to help other teams build and maintain
-        their web applications.
-      </p>
+      <p>{{ latestWork.summary }}</p>
     </article>
+    {% endif %}
   </ul>
 </section>
 <section class="section-spacer">

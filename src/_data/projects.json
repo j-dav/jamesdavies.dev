@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Small Print",
+    "summary": "A set of free public tools that make the real cost of everyday financial decisions easier to understand without jargon, spin, or incentives.",
+    "details": [
+      "Reframes monthly affordability into totals, cost per year, cost per mile/day, and long-term repetition effects so people can see the \"small print\" clearly.",
+      "Not a comparison site and not financial advice.",
+      "Built as a static, client-side app with Vite, React, and TypeScript, prioritising clarity, correctness, and restraint."
+    ],
+    "focus": [
+      "Exposing misleading or asymmetric framing in systems",
+      "Building tools that empower users without manipulating outcomes",
+      "Shipping small, complete products outside traditional organisational constraints"
+    ],
+    "links": {
+      "live": "https://smallprint.tools"
+    }
+  }
+]

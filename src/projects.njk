@@ -2,4 +2,35 @@
 layout: base.njk
 title: Projects
 ---
-<div></div>
+<section class="section-spacer work-section">
+  <div class="section-header">
+    <p>Projects</p>
+  </div>
+  {% for project in projects %}
+  <ul>
+    <li style="font-weight: 600;">{{ project.name }}</li>
+    {% if project.summary %}
+    <article>
+      <p>{{ project.summary }}</p>
+      {% if project.details %}
+      {% for detail in project.details %}
+      <p>{{ detail }}</p>
+      {% endfor %}
+      {% endif %}
+      {% if project.focus %}
+      <ul class="project-focus">
+        {% for item in project.focus %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if project.links and project.links.live %}
+      <p>
+        <a href="{{ project.links.live }}">{{ project.links.live }}</a>
+      </p>
+      {% endif %}
+    </article>
+    {% endif %}
+  </ul>
+  {% endfor %}
+</section>
