@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  color: #1b2733;
+  background:
+    radial-gradient(circle at 100% 0%, #f5dcca 0%, transparent 35%),
+    linear-gradient(180deg, #fdf7ef 0%, #f5efe7 100%);
+}
+
+.draft-shell-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.15rem clamp(1rem, 4vw, 2.25rem);
+  border-bottom: 1px solid #dbc7b5;
+}
+
+.draft-shell-header a {
+  color: #1f2f3a;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(1.1rem, 4vw, 2.5rem);
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.editorial-hero {
+  border-bottom: 1px solid #d7c4b5;
+  padding-bottom: 1.5rem;
+}
+
+.editorial-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: #8e5e3f;
+}
+
+.editorial-hero h1 {
+  margin-top: 0.7rem;
+  font-size: clamp(2rem, 4.8vw, 3.3rem);
+  line-height: 1.08;
+  max-width: 18ch;
+}
+
+.editorial-hero p {
+  margin: 1rem 0 0;
+  max-width: 56ch;
+  font-size: 1.04rem;
+  line-height: 1.55;
+  color: #2d3a45;
+}
+
+.editorial-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.editorial-panel {
+  background: rgb(255 255 255 / 64%);
+  border: 1px solid #dfcebf;
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+}
+
+.editorial-panel h2 {
+  font-size: 1.3rem;
+}
+
+.editorial-panel ul {
+  margin: 0.9rem 0 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.editorial-feature {
+  margin-top: 1rem;
+  background: #25303e;
+  color: #f4f0ea;
+  border-radius: 16px;
+  padding: clamp(1rem, 3vw, 1.6rem);
+}
+
+.editorial-feature h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.editorial-feature p {
+  margin: 0.8rem 0 0;
+  max-width: 64ch;
+  line-height: 1.5;
+  color: #dbe3ea;
+}
+
+.editorial-actions {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.editorial-actions a {
+  color: #13283f;
+  background: #f6d7bf;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  .editorial-columns {
+    grid-template-columns: 1fr;
+  }
+}

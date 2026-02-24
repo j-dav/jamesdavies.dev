@@ -1,0 +1,59 @@
+---
+layout: draft-base.njk
+title: Draft 1 · Operator Console
+description: Technical operator style portfolio draft for a software engineer and founder.
+permalink: /drafts/operator/index.html
+draftStylesheet: /styles/draft-operator.css
+fontUrls:
+  - https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap
+---
+{% set latestWork = work[0] %}
+{% set latestProject = projects[0] %}
+<section class="operator-grid">
+  <div class="operator-hero">
+    <p class="operator-kicker">Draft 1 · Operator Console</p>
+    <h1>James Davies</h1>
+    <p class="operator-summary">
+      Senior software engineer and founder-minded builder focused on reliable
+      systems, useful products and clear execution.
+    </p>
+    <ul class="operator-metrics">
+      <li>Node.js + platform engineering</li>
+      <li>Experiment-led delivery</li>
+      <li>People and product leadership</li>
+    </ul>
+  </div>
+
+  <div class="operator-card">
+    <h2>Current role</h2>
+    <p class="operator-title">{{ latestWork.role }}</p>
+    <p>{{ latestWork.company }} · {{ latestWork.dates }}</p>
+    {% if latestWork.details %}
+    <ul>
+      {% for detail in latestWork.details %}
+      {% if loop.index <= 3 %}
+      <li>{{ detail }}</li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+
+  <div class="operator-card">
+    <h2>Featured project</h2>
+    <p class="operator-title">{{ latestProject.name }}</p>
+    <p>{{ latestProject.summary }}</p>
+    {% if latestProject.focus %}
+    <ul>
+      {% for item in latestProject.focus %}
+      {% if loop.index <= 2 %}
+      <li>{{ item }}</li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if latestProject.links and latestProject.links.live %}
+    <a href="{{ latestProject.links.live }}">Open project</a>
+    {% endif %}
+  </div>
+</section>
