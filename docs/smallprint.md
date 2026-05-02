@@ -1,17 +1,9 @@
-## Small Print
+  Small·Print is a free, no-frills collection of UK financial calculators I built to help people see the actual numbers behind everyday money decisions.
 
-**Small Print** is a set of free public tools designed to make the real cost of everyday financial decisions easier to understand — without jargon, spin, or incentives.
+  The tools cover salary take-home pay, car finance (PCP and lease), mortgages, childcare costs, and credit card minimum payments — each one designed to show you what something really costs over time, without the upsells or rankings that come with most
+  comparison sites.
 
-Many financial products are framed around _monthly affordability_, which hides their true cost over time. Small Print reframes those same decisions using totals, cost per year, cost per mile/day, and long-term repetition effects, so people can see the “small print” clearly and decide for themselves.
+  It's entirely client-side (no backend, no tracking), and every calculator is shareable via URL so you can send your exact inputs to someone else. I also write short editorial scenarios alongside the salary tool — worked examples that put the numbers in
+  context.
 
-Small Print is intentionally **not** a comparison site and does **not** provide financial advice. The tools are designed as quiet public utilities: neutral, transparent, and low-maintenance.
-
-From a technical perspective, the project is built as a static, client-side application (Vite, React, TypeScript) with a focus on clarity, correctness, and restraint. All calculations are performed in the browser using clearly labelled assumptions, prioritising understandable framing over false precision.
-
-This project reflects my interest in:
-
-- exposing misleading or asymmetric framing in systems
-- building tools that empower users without manipulating outcomes
-- shipping small, complete products outside traditional organisational constraints
-
-**Live:** https://smallprint.tools
+  Stack: React 19, TypeScript, Vite, Tailwind CSS, Radix UI, deployed on Cloudflare Pages.

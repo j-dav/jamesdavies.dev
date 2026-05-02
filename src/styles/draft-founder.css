@@ -7,8 +7,7 @@ body {
   min-height: 100vh;
   font-family: "Archivo", "Segoe UI", sans-serif;
   color: #d9e1ea;
-  background:
-    linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+  background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
 }
 
 .draft-shell-header {
