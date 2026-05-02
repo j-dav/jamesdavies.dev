@@ -1,0 +1,77 @@
+---
+layout: draft-base.njk
+title: Draft 3 · Founder Launchpad
+description: Technical portfolio draft for a software engineer and founder.
+permalink: /drafts/founder/index.html
+draftStylesheet: /styles/draft-founder.css
+fontUrls:
+  - https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=JetBrains+Mono:wght@400;500&display=swap
+---
+<section class="portfolio-section intro-section">
+  <p class="portfolio-kicker">Draft 3 · Technical Portfolio</p>
+  <h1>Software engineer and founder</h1>
+  <p>
+    I build reliable products from idea to production, with a focus on backend systems,
+    operational quality, and practical product decisions.
+  </p>
+  <p class="intro-links">
+    <a href="/">Home</a> · <a href="/projects">Projects</a> ·
+    <a href="/work">Work</a> · <a href="/blog">Blog</a>
+  </p>
+</section>
+
+<section class="portfolio-section">
+  <h2>Selected work</h2>
+  <ul class="portfolio-list">
+    {% for entry in work %}
+    {% if loop.index <= 2 %}
+    <li class="portfolio-card">
+      <p class="portfolio-meta">{{ entry.dates }}</p>
+      <h3>{{ entry.role }}</h3>
+      <p class="portfolio-subhead">{{ entry.company }}</p>
+      {% if entry.details %}
+      <ul class="portfolio-points">
+        {% for detail in entry.details %}
+        {% if loop.index <= 2 %}
+        <li>{{ detail }}</li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="portfolio-section">
+  <h2>Selected projects</h2>
+  <ul class="portfolio-list">
+    {% for project in projects %}
+    {% if loop.index <= 2 %}
+    <li class="portfolio-card">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.summary }}</p>
+      {% if project.links and project.links.live %}
+      <p class="portfolio-link-row">
+        <a href="{{ project.links.live }}">{{ project.links.live }}</a>
+      </p>
+      {% endif %}
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="portfolio-section">
+  <h2>Focus areas</h2>
+  {% if projects[0].focus %}
+  <ul class="portfolio-points">
+    {% for item in projects[0].focus %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>Product strategy, backend systems, and measurable user outcomes.</p>
+  {% endif %}
+</section>

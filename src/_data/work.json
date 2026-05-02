@@ -1,22 +1,21 @@
 [
   {
     "company": "Financial Times",
-    "role": "Senior Engineer (Infrastructure and Operations)",
-    "dates": "Mar 2021 - Present",
+    "role": "Senior Software Engineer",
+    "dates": "Mar 2021 – Present",
     "summary": "",
     "details": [
-      "Led development of a Node.js backend service handling millions of daily requests for FT web and mobile, transforming, caching, and serving images.",
-      "Collaborated closely with product and design teams to run small, data-driven experiments, rapidly iterating to improve developer and customer experience.",
-      "Mentored two engineers (senior and mid-level), setting objectives and supporting career development.",
-      "Managed deployments via AWS (ECS/Fargate, Docker) with CI/CD ensuring seamless releases.",
-      "Built Node.js CLI tools to automate developer pain points, adopted across multiple teams.",
-      "Led sprint planning and refinement, created Jira tickets, and collaborated with leadership on OKRs."
+      "Engineering Insights (Nov 2025–present) — currently embedded in this workstream.",
+      "Tech Lead, Origami (Dec 2023–Nov 2025) — led three platinum-tier platform services used by every engineering team at the FT; managed and mentored two engineers.",
+      "Led redesign of the FT's Image Service (millions of daily requests) — 62% average performance improvement and 99.5% cache hit rate.",
+      "Led migration of three platform services from Heroku to AWS (ECS/Fargate), improving scalability and reducing cost.",
+      "Tech Lead, Developer Automation and Martech (Mar 2021–Dec 2023) — drove platform tooling and marketing technology delivery."
     ]
   },
   {
     "company": "Capgemini AIE",
     "role": "Emerging Technology Engineer",
-    "dates": "Jul 2019 - Mar 2021",
+    "dates": "Jul 2019 – Mar 2021",
     "summary": "",
     "details": [
       "Worked on CornerShop, a live retail proof-of-concept in London blending digital innovation with in-store experiences.",

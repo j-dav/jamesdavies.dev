@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: #e8efe1;
+  background:
+    radial-gradient(circle at 85% 15%, #2a3f22 0%, #0c1a1f 35%),
+    linear-gradient(180deg, #0f172a 0%, #0b1221 100%);
+}
+
+.draft-shell-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem clamp(1rem, 4vw, 2.25rem);
+  border-bottom: 1px solid #3d4a2a;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
+}
+
+.draft-shell-header a {
+  color: #d4e7ad;
+  text-decoration: none;
+}
+
+main {
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.operator-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+}
+
+.operator-hero,
+.operator-card {
+  background: linear-gradient(160deg, rgb(15 27 35 / 80%), rgb(9 13 24 / 86%));
+  border: 1px solid #3d4a2a;
+  border-radius: 18px;
+  padding: clamp(1rem, 2vw, 1.75rem);
+  box-shadow: inset 0 0 0 1px rgb(157 187 110 / 15%);
+}
+
+.operator-hero {
+  grid-row: span 2;
+}
+
+.operator-kicker {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  color: #afc78a;
+}
+
+h1 {
+  margin: 0.8rem 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  line-height: 1.05;
+}
+
+h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.operator-summary {
+  margin: 0;
+  color: #c3d0cc;
+  max-width: 34ch;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.operator-metrics,
+.operator-card ul {
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.operator-metrics li,
+.operator-card li {
+  background: rgb(171 196 120 / 14%);
+  border-left: 3px solid #b6cf8f;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+}
+
+.operator-title {
+  margin: 0.2rem 0 0.45rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.operator-card p {
+  margin: 0;
+  color: #ced8d4;
+  line-height: 1.4;
+}
+
+.operator-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0f172a;
+  background: #d4e7ad;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.45rem 0.75rem;
+  border-radius: 7px;
+}
+
+@media (max-width: 900px) {
+  .operator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .operator-hero {
+    grid-row: auto;
+  }
+}

@@ -6,11 +6,17 @@
     "dev": "eleventy --serve --port=3000",
     "start": "eleventy --serve --port=3000",
     "build": "eleventy",
-    "clean": "rm -rf _site",
-    "format": "npx prettier -w -c ."
+    "clean": "rm -rf dist",
+    "format": "biome format --write .",
+    "verify": "biome check --write .",
+    "a11y:check": "bash scripts/a11y-check.sh",
+    "prepare": "lefthook install",
+    "mcp:puppeteer": "npx -y @puppeteer/mcp@latest"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@biomejs/biome": "^2.4.14",
+    "lefthook": "^2.1.6"
   },
   "volta": {
     "node": "24.7.0"

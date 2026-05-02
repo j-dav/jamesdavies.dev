@@ -1,0 +1,8 @@
+pre-commit:
+  commands:
+    verify:
+      glob: "*.{js,cjs,css,json}"
+      run: npx biome check --write {staged_files}
+      stage_fixed: true
+    build:
+      run: npm run build

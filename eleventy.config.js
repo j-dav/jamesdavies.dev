@@ -1,4 +1,6 @@
-module.exports = function (eleventyConfig) {
+module.exports = (eleventyConfig) => {
+	eleventyConfig.amendLibrary('md', (mdLib) => mdLib.set({ breaks: true }));
+
 	// Passthrough copy for static assets
 	eleventyConfig.addPassthroughCopy({ public: '/' });
 	eleventyConfig.addWatchTarget('./src/styles/global.css');
@@ -10,7 +12,7 @@ module.exports = function (eleventyConfig) {
 			includes: '_includes',
 			layouts: '_layouts',
 			data: '_data',
-			output: '_site',
+			output: 'dist',
 		},
 		templateFormats: ['njk', 'md', 'html'],
 		markdownTemplateEngine: 'njk',

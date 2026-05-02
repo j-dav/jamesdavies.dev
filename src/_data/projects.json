@@ -1,17 +1,26 @@
 [
   {
-    "name": "Small Print",
-    "summary": "A set of free public tools that make the real cost of everyday financial decisions easier to understand without jargon, spin, or incentives.",
+    "name": "Chain",
+    "summary": "A daily number puzzle. Each day you're given a starting number and a target, and three operations to get from one to the other.",
     "details": [
-      "Reframes monthly affordability into totals, cost per year, cost per mile/day, and long-term repetition effects so people can see the \"small print\" clearly.",
-      "Not a comparison site and not financial advice.",
-      "Built as a static, client-side app with Vite, React, and TypeScript, prioritising clarity, correctness, and restraint."
+      "Three operations: Flip (reverse the digits), Boost (multiply by 2), Nudge (add 3). The challenge is finding the shortest chain.",
+      "Every player gets the same puzzle each day so you can compare scores. Includes practice mode for unlimited puzzles and hard mode with longer solutions and limited undos.",
+      "No-backend PWA — puzzle generation, solving, and stats all run client-side. Works offline."
     ],
-    "focus": [
-      "Exposing misleading or asymmetric framing in systems",
-      "Building tools that empower users without manipulating outcomes",
-      "Shipping small, complete products outside traditional organisational constraints"
+    "stack": "React · Vite · Cloudflare Pages",
+    "links": {
+      "live": "https://thechainpuzzle.com"
+    }
+  },
+  {
+    "name": "Small Print",
+    "summary": "A free, no-frills collection of UK financial calculators built to help people see the actual numbers behind everyday money decisions.",
+    "details": [
+      "Covers salary take-home pay, car finance (PCP and lease), mortgages, childcare costs, and credit card minimum payments — each one showing what something really costs over time, without the upsells or rankings that come with most comparison sites.",
+      "Entirely client-side with no backend or tracking. Every calculator is shareable via URL so you can send your exact inputs to someone else.",
+      "Includes editorial scenarios alongside the salary tool — worked examples that put the numbers in context."
     ],
+    "stack": "React 19 · TypeScript · Vite · Tailwind CSS · Cloudflare Pages",
     "links": {
       "live": "https://smallprint.tools"
     }

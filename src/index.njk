@@ -1,63 +1,101 @@
 ---
 layout: base.njk
 title: James Davies
+description: Personal website of James Davies with recent work, projects, and writing.
 ---
-<section class="section-spacer">
-  <article>
-    <p>
-      I'm a software engineer, passionate problem solver, mentor, tech lead,
-      husband, father and keen cook.
-    </p>
-    <p>
-      I have a passion for building (breaking) things, solving problems and
-      learning new technologies. I have keen interests in backend development,
-      API design, developer automation tooling and web technologies.
-    </p>
-    <p>
-      Here you'll find my work, projects and blog posts on all sorts of
-      things.
-    </p>
-  </article>
+<section class="section-spacer intro">
+  <div class="hero">
+    <img src="/assets/hero.jpg" width="96" height="96" alt="James Davies" class="hero-avatar" />
+    <div>
+      <h1 class="page-title">James Davies</h1>
+      <p>
+I’m a Senior Software Engineer with a passion for building systems that make a meaningful impact.
+<p>
+Over my career I’ve led teams, designed key systems, and helped shape engineering practices that enable scale and quality.
+</p>
+      </p>
+      <p>
+As a deaf engineer, accessibility and inclusion matter deeply to me. I want to help make tech a space where everyone can thrive.
+
+      </p>
+    </div>
+  </div>
+  <ul class="social-links" aria-label="Social links">
+    <li>
+      <a href="https://github.com/j-dav" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+          <path d="M9 18c-4.51 2-5-2-7-2"/>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/jamesmikedavies/" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect width="4" height="12" x="2" y="9"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://x.com/jamesmikedavies" aria-label="X">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.7 5.3 4.3 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:jamesmikedavies@gmail.com" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect width="20" height="16" x="2" y="4" rx="2"/>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+      </a>
+    </li>
+  </ul>
 </section>
 <section class="section-spacer work-section">
   <div class="section-header">
-    <a href="/work">Work</a>
-    <a href="/work">View all work</a>
+    <h2>Experience</h2>
+    <a href="/work">Full history</a>
   </div>
-  {% set latestWork = work[0] %}
-  <ul>
-    <li style="font-weight: 600;">{{ latestWork.company }}</li>
-    <li>{{ latestWork.role }}</li>
-    <li>{{ latestWork.dates }}</li>
-    {% if latestWork.summary %}
-    <article>
-      <p>{{ latestWork.summary }}</p>
-    </article>
+  {% for entry in work %}
+  <ul class="entry-list">
+    <li class="entry-title">{{ entry.role }}</li>
+    <li class="entry-subtitle">{{ entry.company }}</li>
+    <li class="entry-meta">{{ entry.dates }}</li>
+    {% if entry.summary %}
+    <li class="entry-summary">{{ entry.summary }}</li>
+    {% elif entry.details %}
+    <li>
+      <ul class="text-points">
+        {% for detail in entry.details %}
+        <li>{{ detail }}</li>
+        {% endfor %}
+      </ul>
+    </li>
     {% endif %}
   </ul>
+  {% endfor %}
 </section>
-<section class="section-spacer">
-  <p style="font-weight: 600;">Connect with me</p>
-  <article>
-    If you want to get in touch with me, you can reach me on social media or
-    via email.
-  </article>
-  <ul class="social-links">
-    <li>
-      <a href="https://x.com/jamesmikedavies">
-        <img src="/assets/x.svg" width="48" height="48" alt="X"/>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/jamesmikedavies/">
-        <img src="/assets/linkedin.svg" width="48" height="48" alt="LinkedIn"/>
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/j-dav">
-        <img src="/assets/github.svg" width="48" height="48" alt="GitHub"/>
-      </a>
-    </li>
+<section class="section-spacer work-section">
+  <div class="section-header">
+    <h2>Projects</h2>
+    <a href="/projects">All projects</a>
+  </div>
+  {% for project in projects %}
+  <ul class="entry-list">
+    <li class="entry-title">{{ project.name }}</li>
+    {% if project.summary %}
+    <li class="entry-summary">{{ project.summary }}</li>
+    {% endif %}
+    {% if project.stack %}
+    <li class="entry-meta">{{ project.stack }}</li>
+    {% endif %}
+    {% if project.links and project.links.live %}
+    <li><a href="{{ project.links.live }}">{{ project.links.live }}</a></li>
+    {% endif %}
   </ul>
-  <a href="mailto:jamesmikedavies@gmail.com">jamesmikedavies@gmail.com</a>
+  {% endfor %}
 </section>
