@@ -26,3 +26,10 @@
 - [x] Add "selected" state styling for nav links.
 - [x] Add a "featured project" block to the homepage with one clear outbound CTA.
 - [x] Add an accessibility check script and run it in CI.
+
+## SEO audit (2026-05-02)
+
+- [x] Add favicon (`public/favicon.svg` — blue rounded square, "JD" initials).
+- [x] Add `twitter:creator` meta tag (`@jamesmikedavies`).
+- [x] Fix hardcoded `https://jamesdavies.dev` URLs in JSON-LD — now use `{{ site.url }}`.
+- [x] Split `theme-color` meta into light/dark variants to match the site's colour scheme.
