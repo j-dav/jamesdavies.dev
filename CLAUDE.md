@@ -15,11 +15,11 @@ npm run a11y:check   # Axe accessibility audit (requires Chrome/Chromium)
 
 There are no automated tests. Smoke-test the dev server in a browser after changes. The pre-commit hook runs `biome check --write` and `npm run build` automatically via Lefthook.
 
-`npm run a11y:check` builds the site then audits `/`, `/work/`, `/projects/`, and `/blog/` with axe-core. Set `CHROME_PATH` if Chrome is not auto-detected; use `A11Y_BROWSER=firefox` to switch browsers.
+`npm run a11y:check` builds the site then audits `/`, `/work/`, `/projects/`, `/blog/`, and `/cv/` with axe-core. Set `CHROME_PATH` if Chrome is not auto-detected, `CHROMEDRIVER_PATH` if axe's bundled ChromeDriver does not match your Chrome; use `A11Y_BROWSER=firefox` to switch browsers.
 
 ## Architecture
 
-Static personal portfolio built with [Eleventy 3](https://www.11ty.dev/), deployed to Cloudflare Pages. Output goes to `dist/`. No client-side JavaScript, no CSS framework.
+Static personal portfolio built with [Eleventy 3](https://www.11ty.dev/), deployed to Cloudflare Pages. Output goes to `dist/`. No client-side JavaScript beyond the small inline theme script in `base.njk`, no CSS framework.
 
 **Templates:** Nunjucks (`.njk`). All pages inherit from `src/_layouts/base.njk`; the CV has its own `src/_layouts/cv.njk`. Shared partials live in `src/_includes/`.
 

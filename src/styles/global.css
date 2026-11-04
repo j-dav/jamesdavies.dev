@@ -355,7 +355,7 @@ hr {
   margin-bottom: 0.5rem;
 }
 
-.blog-empty-links {
+.link-list {
   list-style: none;
   margin-top: 0.8rem;
   display: flex;
@@ -363,7 +363,7 @@ hr {
   gap: 0.9rem;
 }
 
-.blog-empty-links a {
+.link-list a {
   text-decoration: none;
   font-weight: 600;
 }
