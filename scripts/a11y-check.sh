@@ -16,6 +16,7 @@ PAGES=(
   "${BASE_URL}/work/"
   "${BASE_URL}/projects/"
   "${BASE_URL}/blog/"
+  "${BASE_URL}/cv/"
 )
 
 if [[ "${SKIP_BUILD}" -eq 0 ]]; then
@@ -75,7 +76,7 @@ else
   exit 1
 fi
 
-python3 -m http.server "${PORT}" --bind "${HOST}" --directory _site >/tmp/a11y-http-server.log 2>&1 &
+python3 -m http.server "${PORT}" --bind "${HOST}" --directory dist >/tmp/a11y-http-server.log 2>&1 &
 SERVER_PID=$!
 
 cleanup() {
