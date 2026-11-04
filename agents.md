@@ -9,7 +9,7 @@
 ## Delivery standards
 
 - Make small, readable diffs with clear intent.
-- Favour explicit code and predictable control flow over terse tricks.y
+- Favour explicit code and predictable control flow over terse tricks.
 - Validate and sanitise inputs defensively.
 - Keep assumptions labelled and easy to inspect.
 - Maintain mobile usability (no horizontal scroll, sensible tap targets, stacked layouts).
