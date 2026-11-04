@@ -1,6 +1,7 @@
 {
   "title": "James Davies",
-  "description": "James Davies — Senior Software Engineer at the Financial Times. Building backend systems, platform tools, and independent products.",
+  "description": "James Davies — Engineering Manager at the Financial Times. Building reliable systems and teams, and growing the engineers who build them.",
   "url": "https://jamesdavies.dev",
-  "ogImage": "/assets/hero.jpg"
+  "ogImage": "/assets/hero.jpg",
+  "ogImageAlt": "Portrait of James Davies"
 }

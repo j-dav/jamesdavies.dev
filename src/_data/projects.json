@@ -11,18 +11,5 @@
     "links": {
       "live": "https://thechainpuzzle.com"
     }
-  },
-  {
-    "name": "Small Print",
-    "summary": "A free, no-frills collection of UK financial calculators built to help people see the actual numbers behind everyday money decisions.",
-    "details": [
-      "Covers salary take-home pay, car finance (PCP and lease), mortgages, childcare costs, and credit card minimum payments — each one showing what something really costs over time, without the upsells or rankings that come with most comparison sites.",
-      "Entirely client-side with no backend or tracking. Every calculator is shareable via URL so you can send your exact inputs to someone else.",
-      "Includes editorial scenarios alongside the salary tool — worked examples that put the numbers in context."
-    ],
-    "stack": "React 19 · TypeScript · Vite · Tailwind CSS · Cloudflare Pages",
-    "links": {
-      "live": "https://smallprint.tools"
-    }
   }
 ]

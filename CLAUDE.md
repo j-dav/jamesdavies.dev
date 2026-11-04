@@ -36,3 +36,13 @@ Static personal portfolio built with [Eleventy 3](https://www.11ty.dev/), deploy
 - Every page sets `title` and `description` in its front matter.
 - Active nav items use `aria-current="page"`.
 - Biome enforces: tabs for JS, 2-space indent for CSS/JSON, single quotes, trailing commas.
+
+## Agent skills
+
+### Issue tracker
+
+Issues live in GitHub Issues (`j-dav/jamesdavies.dev`), via the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+Single-context: `GLOSSARY.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.

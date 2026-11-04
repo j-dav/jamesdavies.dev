@@ -15,11 +15,13 @@
   --focus-ring: #3b82f6;
   --meta-color: #6b7280;
   --max-width: 860px;
+  color-scheme: light;
   font-family: "Archivo", "Segoe UI", sans-serif;
   font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
 }
 
 html.dark {
+  color-scheme: dark;
   --bg: #0f172a;
   --text: #d9e1ea;
   --heading: #f8fafc;
@@ -73,6 +75,22 @@ a:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
   border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  z-index: 10;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  background-color: var(--bg);
+  color: var(--heading);
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
 }
 
 header {
@@ -225,7 +243,7 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.55;
+  opacity: 0.8;
   border-radius: 4px;
   padding: 2px;
 }
@@ -348,6 +366,12 @@ hr {
 .blog-empty-links a {
   text-decoration: none;
   font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }
 
 @media (max-width: 480px) {

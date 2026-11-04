@@ -31,3 +31,7 @@ Thumbs.db
 # editor/IDE
 .vscode/
 .idea/
+
+# AI tooling (local only)
+.junie/
+.scratch/

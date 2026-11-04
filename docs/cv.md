@@ -32,7 +32,7 @@ As a Deaf engineer, I bring a lived perspective on inclusive engineering practic
 #### Technical impact
 
 - Led the ground-up redesign of the FT's Image Service (a platform handling millions of daily requests for ft.com web and mobile) from v2 to v3, introducing a scheme-based routing architecture that materially improved extensibility and reduced the cost of adding new image sources.
-- Delivered a 62% average performance improvement on high-traffic image processing through internal caching, and achieved a 99.5% cache hit rate by migrating delivery to Cloudflare and optimising the image variant strategy.
+- Delivered a 62% average performance improvement on high-traffic image processing through internal caching, and achieved a 99.9% cache hit rate by migrating delivery to Cloudflare and optimising the image variant strategy.
 - Led migration of three platform services (Image, Navigation, Build) from Heroku to AWS (ECS/Fargate, Lambda), improving scalability, cost efficiency, and operational control.
 - Drove Image Service v3 to platinum-tier status (multi-region, enhanced resilience) and continue to deliver cost and performance optimisation.
 

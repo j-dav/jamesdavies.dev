@@ -16,6 +16,7 @@ PAGES=(
   "${BASE_URL}/work/"
   "${BASE_URL}/projects/"
   "${BASE_URL}/blog/"
+  "${BASE_URL}/cv/"
 )
 
 if [[ "${SKIP_BUILD}" -eq 0 ]]; then
@@ -44,6 +45,15 @@ if [[ "${A11Y_BROWSER}" == "chrome" ]]; then
   fi
 
   BROWSER_ARGS=(--chrome-path "${CHROME_PATH}" --chrome-options "${A11Y_CHROME_OPTIONS}")
+
+  # axe bundles its own ChromeDriver, which can lag behind the installed Chrome.
+  # GitHub runners ship a matching driver at $CHROMEWEBDRIVER; set CHROMEDRIVER_PATH to override.
+  if [[ -z "${CHROMEDRIVER_PATH:-}" ]] && [[ -x "${CHROMEWEBDRIVER:-}/chromedriver" ]]; then
+    CHROMEDRIVER_PATH="${CHROMEWEBDRIVER}/chromedriver"
+  fi
+  if [[ -n "${CHROMEDRIVER_PATH:-}" ]]; then
+    BROWSER_ARGS+=(--chromedriver-path "${CHROMEDRIVER_PATH}")
+  fi
 elif [[ "${A11Y_BROWSER}" == "firefox" ]]; then
   if ! command -v firefox >/dev/null 2>&1; then
     if [[ -x "/var/lib/flatpak/app/org.mozilla.firefox/current/active/files/lib/firefox/firefox" ]]; then
@@ -75,7 +85,7 @@ else
   exit 1
 fi
 
-python3 -m http.server "${PORT}" --bind "${HOST}" --directory _site >/tmp/a11y-http-server.log 2>&1 &
+python3 -m http.server "${PORT}" --bind "${HOST}" --directory dist >/tmp/a11y-http-server.log 2>&1 &
 SERVER_PID=$!
 
 cleanup() {
