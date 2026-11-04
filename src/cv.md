@@ -1,19 +1,19 @@
 ---
 layout: cv.njk
 title: CV — James Davies
-description: CV of James Davies, Senior Software Engineer.
+description: CV of James Davies, Engineering Manager.
 ---
 
 # James Davies
 
-**Senior Software Engineer**
+**Engineering Manager**
 📧 [jamesmikedavies@gmail.com](mailto:jamesmikedavies@gmail.com) | [GitHub](https://github.com/j-dav) | [LinkedIn](https://www.linkedin.com/in/jamesmikedavies/)
 
 ---
 
 ## Profile
 
-Senior Software Engineer with five years' experience building and operating high-traffic backend systems at the Financial Times, and a consistent track record of stepping into technical and people leadership. Comfortable as a hands-on Tech Lead. Shaping technical direction on mission-critical services serving millions of users daily, while coaching engineers, leading delivery, and partnering with stakeholders across the organisation.
+Engineering Manager with five years' experience building and operating high-traffic backend systems at the Financial Times, and a consistent track record of stepping into technical and people leadership. Now focused on the people side: coaching engineers, hiring well, and creating the conditions for teams to do their best work. Previously a hands-on Tech Lead shaping technical direction on mission-critical services serving millions of users daily.
 
 As a Deaf engineer, I bring a lived perspective on inclusive engineering practice and actively cultivate that culture in the teams I lead. I'm also involved with Mary Hare School for the Deaf, supporting students as they think about careers in tech and the working world.
 
@@ -21,16 +21,19 @@ As a Deaf engineer, I bring a lived perspective on inclusive engineering practic
 
 ## Experience
 
-### Financial Times — Senior Engineer
+### Financial Times — Engineering Manager
 
-**Engineering Insights** · Nov 2025 – present
+**Engineering Insights** · Jun 2026 – present — Engineering Manager
+**Engineering Insights** · Nov 2025 – Jun 2026 — Senior Engineer
 **Origami** · Dec 2023 – Nov 2025 — Senior Engineer / Tech Lead
 **Internal Products** · Mar 2021 – Dec 2023 — Tech Lead, Developer Automation; Engineer, Martech
 
 #### Leadership & delivery
 
 - Led the Origami workstream across three platinum-tier platform services (Image, Build, Navigation) used by every engineering team at the FT. Set technical direction, drove roadmap alignment, and held the line on operational stability.
-- Manage and mentor two engineers (senior and mid-level), running regular 1:1s, setting objectives aligned to team and org goals, and supporting career progression.
+- Line manage four engineers across seniority levels on the Engineering Insights team, running regular 1:1s, setting objectives aligned to team and org goals, supporting career progression and hiring. Own team delivery and roadmap, and partner with Principal Engineers on technical direction.
+- Current team priorities include the Image Service, a rebuild of an internal business operations database, and AI enablement. Focused on improving how the FT measures and improves engineering effectiveness.
+- Previously managed and mentored two engineers (senior and mid-level) while Tech Lead on Origami.
 - Lead sprint planning, refinements, and retrospectives; partner with leadership on quarterly OKRs and represent the team in cross-organisational technical forums.
 - As Tech Lead for Developer Automation, delivered a suite of internal tools (notifications, repo scanning, secrets migration, observability).
 

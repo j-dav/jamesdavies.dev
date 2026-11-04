@@ -1,11 +1,12 @@
 [
   {
     "company": "Financial Times",
-    "role": "Senior Software Engineer",
+    "role": "Engineering Manager",
     "dates": "Mar 2021 – Present",
     "summary": "",
     "details": [
-      "Engineering Insights (Nov 2025–present) — currently embedded in this workstream.",
+      "Engineering Manager, Engineering Insights (Jun 2026–present) — line managing four engineers across seniority levels, owning team delivery and roadmap, and partnering with Principal Engineers on technical direction. Current work includes the Image Service, a rebuild of an internal business operations database, and AI enablement. Focused on growing engineers, hiring, and improving how the FT measures engineering effectiveness.",
+      "Senior Software Engineer, Engineering Insights (Nov 2025–Jun 2026) — embedded in this workstream before moving into management.",
       "Tech Lead, Origami (Dec 2023–Nov 2025) — led three platinum-tier platform services used by every engineering team at the FT; managed and mentored two engineers.",
       "Led redesign of the FT's Image Service (millions of daily requests) — 62% average performance improvement and 99.5% cache hit rate.",
       "Led migration of three platform services from Heroku to AWS (ECS/Fargate), improving scalability and reducing cost.",
