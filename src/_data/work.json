@@ -8,7 +8,7 @@
       "Engineering Manager, Engineering Insights (Jun 2026–present) — line managing four engineers across seniority levels, owning team delivery and roadmap, and partnering with Principal Engineers on technical direction. Current work includes the Image Service, a rebuild of an internal business operations database, and AI enablement. Focused on growing engineers, hiring, and improving how the FT measures engineering effectiveness.",
       "Senior Software Engineer, Engineering Insights (Nov 2025–Jun 2026) — embedded in this workstream before moving into management.",
       "Tech Lead, Origami (Dec 2023–Nov 2025) — led three platinum-tier platform services used by every engineering team at the FT; managed and mentored two engineers.",
-      "Led redesign of the FT's Image Service (millions of daily requests) — 62% average performance improvement and 99.5% cache hit rate.",
+      "Led redesign of the FT's Image Service (millions of daily requests) — 62% average performance improvement and 99.9% cache hit rate.",
       "Led migration of three platform services from Heroku to AWS (ECS/Fargate), improving scalability and reducing cost.",
       "Tech Lead, Developer Automation and Martech (Mar 2021–Dec 2023) — drove platform tooling and marketing technology delivery."
     ]
